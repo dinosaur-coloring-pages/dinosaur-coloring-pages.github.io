@@ -47,6 +47,7 @@ Downloading the coloring pages is quick and easy.
 2. Save the file to your device.  
 3. Open the PDF.  
 4. Print the pages you want.
+[Download Dinosaur Coloring Pages PDF](https://dinosaurcolorpages.com/)
 
 You can print them on standard A4 or letter paper. Crayons, colored pencils, or markers all work great.
 
