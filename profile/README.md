@@ -1,58 +1,65 @@
-## Dinosaur Coloring Pages (84 Free Printable PDFs)
+# 🦕 Dinosaur Coloring Pages (Free Printable)
 
-Dinosaurs have always fascinated kids. Their huge size, sharp teeth, and mysterious extinction make them exciting to learn about. If your child loves dinosaurs, these [dinosaur coloring pages](https://dinosaurcolorpages.com/) are a perfect activity. They are free, printable, and designed to keep kids entertained while also helping them learn and develop creativity.
+A single-page website featuring 20 free printable dinosaur coloring pages for kids — designed for SEO performance and hosted on GitHub Pages.
 
-These coloring sheets come in **high-quality PDF format**, so you can easily download and print them at home. Whether your child likes the mighty T-Rex or the gentle Brachiosaurus, there are many different dinosaur designs to explore.
+## 📁 File Structure
 
-## Why Kids Love Dinosaur Coloring Pages
+```
+dinosaur-coloring-pages/
+├── index.html          # Main page (SEO optimized)
+├── style.css           # Styles (Lilita One + Nunito fonts)
+├── script.js           # Category filter + lazy loading
+├── README.md           # This file
+└── images/             # All 20 coloring page PNGs
+    ├── realistic-trex.png
+    ├── realistic-triceratops.png
+    ├── realistic-stegosaurus.png
+    ├── realistic-brachiosaurus.png
+    ├── realistic-spinosaurus.png
+    ├── realistic-velociraptor.png
+    ├── pterodactyl-flying-forest.png
+    ├── pterodactyl-flying-mountains.png
+    ├── pterodactyl-flying-sun.png
+    ├── pterodactyl-in-clouds.png
+    ├── pterodactyl-holding-branch.png
+    ├── pterodactyl-sitting-rock.png
+    ├── learning-pterodactyl-123.png
+    ├── learning-velociraptor-abc.png
+    ├── learning-brachiosaurus-123.png
+    ├── learning-stegosaurus-abc.png
+    ├── learning-triceratops-123.png
+    ├── learning-trex-abc.png
+    ├── jurassic-triceratops-tire.png
+    └── jurassic-trex-jeep.png
+```
 
-Coloring is more than just a fun activity. It helps children develop important skills while keeping them engaged. Dinosaur coloring pages are especially exciting because kids can imagine the prehistoric world while choosing their favorite colors.
+## 🚀 Deploy to GitHub Pages
 
-Here are a few benefits of dinosaur coloring pages:
+1. Create a new GitHub repository
+2. Upload all files maintaining the folder structure above
+3. Go to **Settings → Pages**
+4. Set source to **Deploy from a branch → main → / (root)**
+5. Your site will be live at `https://yourusername.github.io/repository-name/`
 
-- Improves hand-eye coordination  
-- Encourages creativity and imagination  
-- Helps children relax and focus  
-- Builds fine motor skills  
-- Makes learning about dinosaurs fun  
+> **Tip:** For a custom domain, add a `CNAME` file to the root with your domain name.
 
-Kids can experiment with colors and create their own version of dinosaurs. Some may color them realistically, while others might choose bright fantasy colors.
+## 🔧 Customization
 
-## What You Will Find in This Collection
+- **Update `index.html`** — change the `og:url` and schema URL from `https://yoursite.com/` to your actual domain
+- **Colors** — edit CSS variables in `:root` in `style.css`
+- **Add pages** — copy a `<article class="card">` block and update the image `src`, `alt`, `download` filename, and card info
 
-This collection includes **84 printable dinosaur coloring pages**, offering a wide variety of designs suitable for different ages. Some pages are simple and perfect for younger kids, while others have more details for older children who enjoy more complex coloring.
+## ✅ SEO Features
 
-The collection includes:
+- Semantic HTML5 with proper heading hierarchy
+- Schema.org WebPage structured data
+- Open Graph + Twitter Card meta tags
+- SEO-optimized image `alt` attributes
+- Descriptive, keyword-rich `download` filenames
+- Mobile-responsive design
+- Fast-loading with native lazy loading
+- No JavaScript required for core content
 
-- T-Rex coloring pages  
-- Triceratops coloring sheets  
-- Velociraptor illustrations  
-- Brachiosaurus and long-neck dinosaurs  
-- Cute cartoon dinosaurs for younger kids  
-- Realistic dinosaur outlines  
+## 📄 License
 
-Because the pages come in **PDF format**, printing them is simple. Just download the file, open it, and print as many copies as you need.
-
-## Perfect for Home, School, or Activities
-
-These dinosaur coloring pages are great for many situations. Parents can use them as a creative activity at home, teachers can include them in classroom lessons, and they are also perfect for birthday parties or rainy day fun.
-
-They are especially helpful when children need a **screen-free activity** that keeps them busy and engaged.
-
-## How to Download and Print
-
-Downloading the coloring pages is quick and easy.
-
-1. Click the download button for the PDF file.  
-2. Save the file to your device.  
-3. Open the PDF.  
-4. Print the pages you want.
-[Download Dinosaur Coloring Pages PDF](https://dinosaurcolorpages.com/)
-
-You can print them on standard A4 or letter paper. Crayons, colored pencils, or markers all work great.
-
-## A Fun Way to Explore the World of Dinosaurs
-
-Dinosaurs spark curiosity in children. While coloring these pages, kids often ask questions about different dinosaur species, what they ate, and where they lived. This makes coloring a great opportunity to introduce them to the **prehistoric world** in a fun and engaging way.
-
-With **84 free dinosaur coloring pages**, there is plenty for kids to explore. Download the printable PDF today and let your child enjoy hours of creative dinosaur coloring fun.
+Coloring pages © DinosaurColorPages.com. Website code is MIT licensed.
