@@ -824,3 +824,84 @@ body {
   grid-template-columns: 1fr;
   gap: 0;
 }
+
+/* =============================================
+   SKELETON LOADING
+   ============================================= */
+
+/* The shimmer animation */
+@keyframes shimmer {
+  0%   { background-position: -700px 0; }
+  100% { background-position:  700px 0; }
+}
+
+/* Skeleton base applied to card-frame before image loads */
+.card-frame.is-loading {
+  background: #e8e4db;
+}
+
+.card-frame.is-loading::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0)   0%,
+    rgba(255,255,255,0.55) 50%,
+    rgba(255,255,255,0)   100%
+  );
+  background-size: 700px 100%;
+  animation: shimmer 1.4s infinite linear;
+  z-index: 3;
+  border-radius: inherit;
+}
+
+/* Dino silhouette hint inside skeleton */
+.card-frame.is-loading .skeleton-hint {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.18;
+}
+
+.skeleton-hint svg {
+  width: 64px;
+  height: 64px;
+  fill: var(--primary-dark);
+}
+
+.skeleton-hint span {
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary-dark);
+}
+
+/* Hide hint lines on the actual img while loading */
+.card-frame.is-loading img {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Fade in once loaded */
+.card-frame.is-loaded img {
+  opacity: 1;
+}
+
+/* Remove skeleton once loaded */
+.card-frame.is-loaded::after,
+.card-frame.is-loaded .skeleton-hint {
+  display: none;
+}
+
+.card-frame.is-loaded {
+  background: #f9f7f4;
+}
