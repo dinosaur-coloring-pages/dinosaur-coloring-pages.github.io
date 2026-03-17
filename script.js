@@ -1,14 +1,12 @@
-// Category filter for coloring pages
 (function () {
-  const buttons = document.querySelectorAll('.cat-btn');
-  const cards = document.querySelectorAll('.card[data-category]');
-  const labels = document.querySelectorAll('.section-label');
+  var buttons = document.querySelectorAll('.cat-btn');
+  var cards   = document.querySelectorAll('.card[data-category]');
+  var labels  = document.querySelectorAll('.section-label');
 
   buttons.forEach(function (btn) {
     btn.addEventListener('click', function () {
-      const filter = btn.getAttribute('data-filter');
+      var filter = btn.getAttribute('data-filter');
 
-      // Update active state
       buttons.forEach(function (b) { b.classList.remove('active'); });
       btn.classList.add('active');
 
@@ -17,34 +15,18 @@
         labels.forEach(function (label) { label.style.display = ''; });
       } else {
         cards.forEach(function (card) {
-          if (card.getAttribute('data-category') === filter) {
-            card.classList.remove('hidden');
-          } else {
-            card.classList.add('hidden');
-          }
+          card.classList.toggle('hidden', card.getAttribute('data-category') !== filter);
         });
-
-        // Show/hide section labels
         labels.forEach(function (label) {
-          const group = label.getAttribute('data-filter-group');
-          label.style.display = (group === filter) ? '' : 'none';
+          label.style.display = label.getAttribute('data-filter-group') === filter ? '' : 'none';
         });
+      }
+
+      // Smooth scroll to first visible card
+      var firstVisible = document.querySelector('.card:not(.hidden)');
+      if (firstVisible) {
+        firstVisible.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     });
   });
-
-  // Lazy-load images with IntersectionObserver for performance
-  if ('IntersectionObserver' in window) {
-    const imgs = document.querySelectorAll('img[loading="lazy"]');
-    const observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          const img = entry.target;
-          observer.unobserve(img);
-        }
-      });
-    }, { rootMargin: '200px' });
-
-    imgs.forEach(function (img) { observer.observe(img); });
-  }
 })();
